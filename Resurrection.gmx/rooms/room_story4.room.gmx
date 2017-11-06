@@ -51,8 +51,8 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_next" x="864" y="608" name="inst_F1C586D3" locked="0" code="" scaleX="0.533333361148834" scaleY="0.45637583732605" colour="4294967295" rotation="0"/>
-    <instance objName="obj_skip" x="928" y="608" name="inst_42534B2F" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_next" x="896" y="320" name="inst_9D3F7C0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_skip" x="64" y="64" name="inst_3CA29B07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stry4" x="0" y="0" name="inst_38F3D607" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

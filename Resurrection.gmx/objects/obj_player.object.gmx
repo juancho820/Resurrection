@@ -115,8 +115,12 @@ if (estado == ej.slide) estado = ej.parado ;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.loose == 1  exit ; 
- 
+            <string>script_execute(estado);
+if (global.loose == 1)
+{
+estado = ej.parado;
+exit ; 
+  } 
 
  if(mouse_check_button_pressed(mb_left)) //and estado == ej.parado )
 {
@@ -148,7 +152,7 @@ alarm_set(0,30);
 slide = 1;
 }
 }
-script_execute(estado);
+
 </string>
           </argument>
         </arguments>
