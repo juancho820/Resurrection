@@ -100,11 +100,10 @@ estado = ene.ataca;
           <argument>
             <kind>1</kind>
             <string>sideAtack = choose(0,1);
-if (sideAtack == 1)
-{
-instance_create(0,0,obj_midPant);
-}
 
+instance_create(0,0,obj_midPant);
+
+alarm_set(1,30);
 </string>
           </argument>
         </arguments>
@@ -127,7 +126,15 @@ instance_create(0,0,obj_midPant);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sideAtack == 1 )
+            <string>script_execute(estado);
+if (global.win == 1  or  global.loose == 1) 
+{
+estado = ene.parado;
+
+exit;
+}
+
+if(sideAtack == 0 )
 {
 enemyAtack = spr_bs1HAtackDer;
 } 
@@ -135,7 +142,9 @@ else
 {
 enemyAtack = spr_bs1HAtackIzq;
 } 
-script_execute(estado);
+
+
+
 
 </string>
           </argument>
@@ -162,6 +171,7 @@ script_execute(estado);
             <string>if (estado == ene.ataca)
 {
 alarm_set(0, random_range(15,90))
+
 }
 estado  = ene.parado; 
 </string>

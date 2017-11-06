@@ -116,7 +116,7 @@ if (estado == ej.slide) estado = ej.parado ;
           <argument>
             <kind>1</kind>
             <string>script_execute(estado);
-if (global.loose == 1)
+if (global.win == 1  or  global.loose == 1) 
 {
 estado = ej.parado;
 exit ; 

@@ -35,7 +35,7 @@ global.dano = 1;
 global.slideDer = 0;
 global.slideIzq = 0;
 global.loose = 0;
-
+global.win = 0;
 instance_create(0,0,obj_beginLvl);
 
 
@@ -77,18 +77,17 @@ instance_create(384, 470, obj_store);
 instance_create(370, 540, obj_replay);
 
 }
+if (global.win)
+{
 
-//if (global.win)
-//{
+instance_create(300, 32, obj_hero);
+instance_create(128, 128, obj_pointsW);
+instance_create(128, 220, obj_lvlKeysW);
+instance_create(128, 320, obj_totalKeyW);
+instance_create(384, 470, obj_nextLvl);
+instance_create(370, 540, obj_lvlsW);
 
-//instance_create(300, 32, obj_hero);
-//instance_create(128, 128, obj_pointsW);
-//instance_create(128, 220, obj_lvlKeysW);
-//instance_create(128, 320, obj_totalKeyW);
-//instance_create(384, 470, obj_nextLvl);
-//instance_create(370, 540, obj_lvlsW);
-
-//}
+}
 
 
 </string>
@@ -239,7 +238,7 @@ instance_create(mouse_x,mouse_y,obj_click);
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -247,6 +246,19 @@ instance_create(mouse_x,mouse_y,obj_click);
             <kind>1</kind>
             <string>//draw_text(100,0,script_get_name(obj_player.estado))
 if (global.loose = 1)
+{
+ 
+draw_set_colour(c_black);
+draw_set_alpha(0.7);
+draw_rectangle(0,0,room_width,room_height,0);
+draw_set_halign(fa_center);
+draw_set_font(font_score);
+draw_set_colour(c_white);
+draw_set_alpha(1);
+draw_set_colour(c_black);
+
+}
+if (global.win = 1)
 {
  
 draw_set_colour(c_black);

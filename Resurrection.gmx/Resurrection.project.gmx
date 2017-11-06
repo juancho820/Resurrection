@@ -142,6 +142,14 @@
       <sprite>sprites\spr_14</sprite>
     </sprites>
     <sprite>sprites\spr_selectorTienda</sprite>
+    <sprites name="menu win">
+      <sprite>sprites\spr_hero</sprite>
+      <sprite>sprites\spr_lvlKeysW</sprite>
+      <sprite>sprites\spr_lvlsW</sprite>
+      <sprite>sprites\spr_nextLvl</sprite>
+      <sprite>sprites\spr_pointsW</sprite>
+      <sprite>sprites\spr_totalKeyW</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\back_forestSun</background>
@@ -247,6 +255,14 @@
       </objects>
       <object>objects\obj_menuAnim</object>
       <object>objects\obj_beginLvl</object>
+      <objects name="menu ganar">
+        <object>objects\obj_hero</object>
+        <object>objects\obj_lvlKeysW</object>
+        <object>objects\obj_lvlsW</object>
+        <object>objects\obj_nextLvl</object>
+        <object>objects\obj_pointsW</object>
+        <object>objects\obj_totalKeyW</object>
+      </objects>
     </objects>
     <object>objects\obj_map</object>
     <objects name="historias">
