@@ -68,6 +68,8 @@ image_index = obj_bs1H.image_index;
 
 if (vida &lt;= 0)
 {
+instance_destroy(obj_bs1H);
+instance_destroy();
 global.win = 1;
 }
 </string>

@@ -31,9 +31,39 @@ enemigoHerido = spr_minionHeridoIzq ;
 enemyAtack = spr_minionAtackIzq ; 
 pointPlayer = 0;
 enemyStay = spr_minionIzq;
-
+golpeado = 0;
 estado = ene.parado ;
-
+if (room = room_lvl1)
+{
+vida = 1;
+}
+if (room = room_lvl2)
+{
+vida = 2;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>golpeado =  0 ;
 </string>
           </argument>
         </arguments>
@@ -56,7 +86,7 @@ estado = ene.parado ;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>instance_create(x,y,obj_puntosClicks);
 instance_destroy();
 </string>
           </argument>
@@ -66,9 +96,9 @@ instance_destroy();
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -80,11 +110,16 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pointPlayer</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
+            <string>if (estado !=  ene.herido)
+
+{
+pointPlayer = 1;
+}
+else
+{
+alarm_set(0,15);
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -106,7 +141,25 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(estado);
+            <string>// coloreo
+if (vida == 1)
+{
+image_blend = c_white;
+}
+if (vida == 2)
+{
+image_blend = c_red;
+}
+if (vida == 3)
+{
+image_blend = c_purple;
+}
+if (vida == 4)
+{
+image_blend = c_green;
+}
+
+script_execute(estado);
 if (global.loose )
 {
 estado = ene.parado
@@ -191,17 +244,29 @@ pointPlayer = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (estado != ene.herido)
-{
-if (obj_player.estado == ej.ataca )
-{
+            <string>if (global.loose == 1) exit;
 
+if (obj_player.estado == ej.ataca )
+
+{
+if (golpeado == 0)
+{
+path_end();
+
+golpeado = 1
+alarm_set(2,5);
 estado = ene.herido ; 
+vida -= 1;
+if (vida == 0)
+{
 var path = choose(path_muerteEnemigo1Izq,path_muerteEnemigo2Izq,path_muerteEnemigo3Izq);
 path_start(path, 5, path_action_stop, 0);
 alarm_set(1,30);
-instance_create(x,y,obj_puntosClicks);
-
+}
+else
+{
+path_start(path_enemigoGolpeIzq, 5, path_action_stop, 0);
+}
 }
 }
 </string>
@@ -242,12 +307,16 @@ instance_create(x,y,obj_puntosClicks);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (estado != ene.parado)
+            <string>if (estado = ene.ataca)
 {
 estado = ene.parado;
 alarm_set(0,30);
 }
+if (estado = ene.herido)
+{
+estado = ene.parado;
 
+}
 </string>
           </argument>
         </arguments>

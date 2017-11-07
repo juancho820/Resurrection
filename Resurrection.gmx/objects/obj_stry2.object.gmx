@@ -28,7 +28,7 @@
             <string>sprite_index = spr_story2;
 image_speed = 0;
 imagen  = 0;
-global.nextRoom = room_mainMenu;
+global.nextRoom = room_lvl2;
 obj_next.historia = obj_stry2;
 
 </string>

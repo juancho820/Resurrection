@@ -119,7 +119,7 @@ global.salud -= 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_player.estado == ej.slide or other.estado == ene.herido) exit; 
+            <string>if (obj_player.estado == ej.slide or other.estado == ene.herido or global.loose == 1) exit; 
 if (hit == 0)
 {
 global.salud -= 1;

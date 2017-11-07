@@ -156,6 +156,7 @@
     <background>background\back_forestSun</background>
     <background>background\background0</background>
     <background>background\background2</background>
+    <background>background\back_otherWorld</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_click</path>
@@ -326,6 +327,7 @@
     <room>rooms\room_mapa</room>
     <room>rooms\room_lvl1</room>
     <room>rooms\room_bs1</room>
+    <room>rooms\room_lvl2</room>
     <room>rooms\room_tienda</room>
   </rooms>
   <help>

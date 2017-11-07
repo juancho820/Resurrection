@@ -34,9 +34,14 @@ enemyStay = spr_minionIzq;
 golpeado = 0;
 
 estado = ene.parado ;
-
+if (room = room_lvl1)
+{
 vida = 2;
-
+}
+if (room = room_lvl2)
+{
+vida = 3;
+}
 
 
 </string>
@@ -139,7 +144,23 @@ alarm_set(0,15);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_blend = c_red;
+            <string>// coloreo
+if (vida == 1)
+{
+image_blend = c_white;
+}
+if (vida == 2)
+{
+image_blend = c_red;
+}
+if (vida == 3)
+{
+image_blend = c_purple;
+}
+if (vida == 4)
+{
+image_blend = c_green;
+}
 script_execute(estado);
 if (global.loose )
 {
@@ -223,7 +244,7 @@ pointPlayer = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if (global.loose == 1) exit;
 
 if (obj_player.estado == ej.ataca )
 
@@ -231,7 +252,7 @@ if (obj_player.estado == ej.ataca )
 if (golpeado == 0)
 {
 path_end();
-path_start(path_enemigoGolpeIzq, 5, path_action_stop, 0);
+
 golpeado = 1
 alarm_set(2,5);
 estado = ene.herido ; 
@@ -241,6 +262,10 @@ if (vida == 0)
 var path = choose(path_muerteEnemigo1Izq,path_muerteEnemigo2Izq,path_muerteEnemigo3Izq);
 path_start(path, 5, path_action_stop, 0);
 alarm_set(1,30);
+}
+else
+{
+path_start(path_enemigoGolpeIzq, 5, path_action_stop, 0);
 }
 }
 }
