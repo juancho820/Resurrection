@@ -140,6 +140,7 @@
       <sprite>sprites\spr_5</sprite>
       <sprite>sprites\spr_9</sprite>
       <sprite>sprites\spr_14</sprite>
+      <sprite>sprites\spr_luzTienda</sprite>
     </sprites>
     <sprite>sprites\spr_selectorTienda</sprite>
     <sprites name="menu win">
@@ -293,9 +294,9 @@
       <object>objects\obj_escudopiedra</object>
       <object>objects\obj_botasoro</object>
       <object>objects\obj_escudoplata</object>
-      <object>objects\obj_escudooro</object>
       <object>objects\obj_lanzapiedra</object>
       <object>objects\obj_lanzaplata</object>
+      <object>objects\obj_escudooro</object>
       <object>objects\obj_lanzaoro</object>
       <object>objects\obj_cofreoro</object>
       <object>objects\obj_cofreplata</object>
@@ -311,6 +312,7 @@
       <object>objects\obj_hudlav</object>
       <object>objects\obj_llave</object>
       <object>objects\obj_numerosUp</object>
+      <object>objects\obj_luzTienda</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -53,7 +53,7 @@ vida = 150;
           <argument>
             <kind>1</kind>
             <string>
-if(obj_bs1H.sideAtack == 1 )
+if(obj_bs1H.sideAtack == 0 )
 {
 enemyAtack = spr_bs1BAtackDer;
 } 
@@ -92,7 +92,8 @@ global.win = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.slideDer == 1  or  global.slideIzq == 1  ) exit;
+            <string>if (global. loose == 1) exit;
+if (global.slideDer == 1  or  global.slideIzq == 1  ) exit;
 
 vida -= 1 ;
 </string>

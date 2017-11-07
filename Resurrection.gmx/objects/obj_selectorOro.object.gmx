@@ -53,18 +53,24 @@ global.decir = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lugar = choose(obj_armaduraoro,obj_botasoro,obj_escudooro,obj_lanzaoro);
+            <string>var uno = obj_fondo;
+var dos  =obj_fondo;
+var tres = obj_fondo;
+var cuatro = obj_fondo;
+
+if (global.t1 &lt; 3 ) var uno = obj_armaduraoro;
+if (global.t2 &lt; 3 )var dos  = obj_botasoro;
+if (global.t3 &lt; 3 )var tres = obj_escudooro;
+if (global.t4 &lt; 3 )var cuatro = obj_lanzaoro;
+lugar = choose(uno,dos,tres,cuatro);
 contador += 1;
 
-
+var decir = 0;
 if (contador &lt; maximo)
 {
 alarm_set(0,3);
 }
 else
-
-
-
 {
 parar = 1;
 instance_create(x,y,obj_numerosUp)
@@ -74,32 +80,87 @@ var decir = 0;
 
 if (lugar == obj_armaduraoro)
 {
-decir = "+1 health";
-global.vida += 3;
-}
+switch (global.t1)
+        {
+            case 0:
+                decir = "+3 health";
+                global.vida += 3;
+                
+                break;
+            case 1:
+                decir = "+2 health";
+                global.vida += 2;
+                break;    
+            case 2:
+                decir = "+1 health";
+                global.vida += 1;
+                break;
 
+}
+instance_create(lugar.x,lugar.y,obj_luzTienda);
+}
 if (lugar == obj_botasoro)
 {
-decir = "+1 health";
-global.vida += 3;
+switch (global.t2)
+        {
+            case 0:
+                decir = "+3 health";
+                global.vida += 3;
+                break;
+            case 1:
+                decir = "+2 health";
+                global.vida += 2;
+                break;    
+            case 2:
+                decir = "+1 health";
+                global.vida += 1;
+                break;
 }
-
+instance_create(lugar.x,lugar.y,obj_luzTienda);
+}
 if (lugar == obj_escudooro)
 {
-decir = "+1 health";
-global.vida += 3;
+switch (global.t3)
+        {
+            case 0:
+                decir = "+3 damage";
+                global.dano += 3;
+                break;
+            case 1:
+                 decir = "+2 damage";
+                global.dano += 2;
+                break;    
+            case 2:
+                 decir = "+1 damage";
+                global.dano += 1;
+                break;
 }
-
+instance_create(lugar.x,lugar.y,obj_luzTienda);
+}
 if (lugar == obj_lanzaoro)
 {
-decir = "+1 damage";
-global.dano += 3;
+switch (global.t4)
+        {
+            case 0:
+                decir = "+3 damage";
+                global.dano += 3;
+                break;
+            case 1:
+                 decir = "+2 damage";
+                global.dano += 2;
+                break;    
+            case 2:
+                 decir = "+1 damage";
+                global.dano += 1;
+                break;
 }
-
-
-
+instance_create(lugar.x,lugar.y,obj_luzTienda);
+}
 global.decir = decir;
+
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -128,12 +189,12 @@ y = lugar.y;
 
 if (parar == 1 )
 {
-image_xscale += 0.05;
-image_yscale += 0.05;
+
+instance_destroy();
 }
  
 
-if (image_xscale &gt; 3) instance_destroy();
+
 </string>
           </argument>
         </arguments>

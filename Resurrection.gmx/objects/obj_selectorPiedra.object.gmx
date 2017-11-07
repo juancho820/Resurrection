@@ -53,7 +53,16 @@ global.decir = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lugar = choose(obj_pechopiedra,obj_botaspiedra,obj_escudopiedra,obj_lanzapiedra);
+            <string>var uno = obj_fondo;
+var dos  =obj_fondo;
+var tres = obj_fondo;
+var cuatro = obj_fondo;
+
+if (global.t1 &lt; 1 ) var uno = obj_pechopiedra;
+if (global.t2 &lt; 1 )var dos  = obj_botaspiedra;
+if (global.t3 &lt; 1 )var tres = obj_escudopiedra;
+if (global.t4 &lt; 1 )var cuatro = obj_lanzapiedra;
+lugar = choose(uno,dos,tres,cuatro);
 contador += 1;
 
 
@@ -62,9 +71,6 @@ if (contador &lt; maximo)
 alarm_set(0,3);
 }
 else
-
-
-
 {
 parar = 1;
 instance_create(x,y,obj_numerosUp)
@@ -76,30 +82,35 @@ if (lugar == obj_pechopiedra)
 {
 decir = "+1 health";
 global.vida += 1;
+instance_create(lugar.x,lugar.y,obj_luzTienda);
 }
 
 if (lugar == obj_botaspiedra)
 {
 decir = "+1 health";
 global.vida += 1;
+instance_create(lugar.x,lugar.y,obj_luzTienda);
 }
 
 if (lugar == obj_escudopiedra)
 {
-decir = "+1 health";
-global.vida += 1;
+decir = "+1 damage";
+global.dano += 1;
+instance_create(lugar.x,lugar.y,obj_luzTienda);
 }
 
 if (lugar == obj_lanzapiedra)
 {
 decir = "+1 damage";
 global.dano += 1;
+instance_create(lugar.x,lugar.y,obj_luzTienda);
 }
 
 
 
 global.decir = decir;
 }
+
 </string>
           </argument>
         </arguments>
@@ -126,14 +137,12 @@ global.decir = decir;
 y = lugar.y;
 
 
+
 if (parar == 1 )
 {
-image_xscale += 0.05;
-image_yscale += 0.05;
-}
- 
 
-if (image_xscale &gt; 3) instance_destroy();
+instance_destroy();
+}
 </string>
           </argument>
         </arguments>

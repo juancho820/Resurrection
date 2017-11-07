@@ -3,7 +3,7 @@
   <spriteName>spr_lanzaEnemig</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>y = -500
 x = random_range(200,700);
-move_towards_point(random_range(448,512), 544, 11);
+move_towards_point(random_range(448,512), 544, 17);
 instance_create(x,0,obj_flechaAvisa);
 </string>
           </argument>
