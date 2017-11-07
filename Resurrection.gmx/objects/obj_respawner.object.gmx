@@ -185,6 +185,10 @@ if (room == room_lvl1)
 {
 nivel = room_bs1;
 }
+if (room == room_lvl2)
+{
+nivel = room_bs2;
+}
 room_goto(nivel);
 </string>
           </argument>
@@ -331,10 +335,7 @@ if (fase == 4)
 {
 var enemigo = choose(obj_minionIzq, obj_minionDer,obj_minion2izq, obj_minion2Der,obj_eneTierraIzq,obj_eneTierraDer,obj_lanzaEnemy);
 }
-//if enemigo == obj_eneTierraDer or enemigo == obj_eneTierraIzq and instance_exists(obj_lanzaEnemy)
-//{
-//exit;
-//} 
+
 instance_create(x,y,enemigo);
 }
 }

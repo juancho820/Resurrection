@@ -94,6 +94,8 @@
         <sprite>sprites\spr_bs2Stay</sprite>
         <sprite>sprites\spr_bs2Salud</sprite>
         <sprite>sprites\spr_bs2Atack</sprite>
+        <sprite>sprites\spr_bs2_2Izq</sprite>
+        <sprite>sprites\spr_bs2_2Der</sprite>
       </sprites>
       <sprites name="gigante">
         <sprite>sprites\spr_bs3Salud</sprite>
@@ -281,6 +283,11 @@
       <object>objects\obj_bs1B</object>
       <object>objects\obj_bsSalud</object>
       <object>objects\obj_saludUp</object>
+      <objects name="boss2">
+        <object>objects\obj_bs2</object>
+        <object>objects\obj_bs2_2Izq</object>
+        <object>objects\obj_bs2_2Der</object>
+      </objects>
     </objects>
     <objects name="tienda">
       <object>objects\obj_fondo</object>
@@ -328,6 +335,7 @@
     <room>rooms\room_lvl1</room>
     <room>rooms\room_bs1</room>
     <room>rooms\room_lvl2</room>
+    <room>rooms\room_bs2</room>
     <room>rooms\room_tienda</room>
   </rooms>
   <help>

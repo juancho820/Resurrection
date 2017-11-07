@@ -194,6 +194,7 @@ pointPlayer = 1
 {
 if (obj_player.estado == ej.ataca )
 {
+instance_create(x,y,obj_puntosClicks);
 estado = ene.herido ;
 var path = choose(path_muerteEnemigo1Der,path_muerteEnemigo2Der,path_muerteEnemigo3Der);
 path_start(path, 5, path_action_stop, 0);
