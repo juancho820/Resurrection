@@ -42,6 +42,10 @@ if (room = room_lvl2)
 {
 vida = 2;
 }
+if (room = room_lvl3)
+{
+vida = 3;
+}
 </string>
           </argument>
         </arguments>
@@ -243,10 +247,16 @@ pointPlayer = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (estado != ene.herido)
-{
+            <string>if (global.loose == 1) exit;
+
 if (obj_player.estado == ej.ataca )
 {
+if (golpeado == 0)
+{
+path_end();
+
+golpeado = 1
+alarm_set(2,5);
 estado = ene.herido ; 
 vida -= 1;
 if (vida == 0)

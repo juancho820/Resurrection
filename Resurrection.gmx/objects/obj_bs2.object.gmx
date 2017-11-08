@@ -28,7 +28,7 @@
             <string>enemyStay = spr_bs2Stay;
 estado = ene.parado;
 enemyAtack = spr_bs2Atack;
-vida = 300;
+perraHijueputa = 300;
 
 alarm_set(0,70);
 </string>
@@ -60,7 +60,7 @@ exit;
 }
 image_index = 0;
 estado = ene.ataca;
-var enemigo = choose(obj_minionIzq, obj_minionDer);
+var enemigo = choose(obj_bs2_2Izq, obj_bs2_2Der);
 instance_create(x,y,enemigo);
 alarm_set(0,irandom_range(15 , 60));
 </string>
@@ -93,7 +93,7 @@ estado = ene.parado;
 exit;
 }
 
-if (vida &lt;= 0)
+if (perraHijueputa &lt;= 0)
 {
 instance_destroy();
 global.win = 1;
@@ -124,7 +124,7 @@ global.win = 1;
             <string>if (global. loose == 1) exit;
 if (instance_exists(obj_bs2_2Der) or instance_exists(obj_bs2_2Izq ) ) exit;
 
-vida -= 1 ;
+perraHijueputa -= 1 ;
 </string>
           </argument>
         </arguments>

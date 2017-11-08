@@ -43,6 +43,10 @@ if (room = room_lvl2)
 {
 vida = 3;
 }
+if (room = room_lvl3)
+{
+vida = 4;
+}
 
 
 
@@ -246,14 +250,14 @@ pointPlayer = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if (global.loose == 1) exit;
 if (obj_player.estado == ej.ataca )
 
 {
 if (golpeado == 0)
 {
 path_end();
-path_start(path_enemigoGolpeDer, 5, path_action_stop, 0);
+
 golpeado = 1
 alarm_set(2,5);
 estado = ene.herido ; 
@@ -264,6 +268,10 @@ instance_create(x,y,obj_puntosClicks);
 var path = choose(path_muerteEnemigo1Der,path_muerteEnemigo2Der,path_muerteEnemigo3Der);
 path_start(path, 5, path_action_stop, 0);
 alarm_set(1,30)
+}
+else
+{
+path_start(path_enemigoGolpeDer, 5, path_action_stop, 0);
 }
 }
 }

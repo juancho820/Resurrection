@@ -42,7 +42,10 @@ if (room = room_lvl2)
 {
 vida = 3;
 }
-
+if (room = room_lvl3)
+{
+vida = 4;
+}
 
 </string>
           </argument>

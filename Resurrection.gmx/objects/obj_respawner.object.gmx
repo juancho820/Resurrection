@@ -336,7 +336,7 @@ if (fase == 4)
 var enemigo = choose(obj_minionIzq, obj_minionDer,obj_minion2izq, obj_minion2Der,obj_eneTierraIzq,obj_eneTierraDer,obj_lanzaEnemy);
 }
 
-instance_create(x,y,enemigo);
+instance_create( random_range(200,700),-500,enemigo);
 }
 }
 alarm_set(0,irandom_range(15 , 60));
