@@ -28,7 +28,7 @@
             <string>enemyStay = spr_bs2Stay;
 estado = ene.ataca;
 enemyAtack = spr_bs2Atack;
-perraHijueputa = 300;
+perraHijueputa = 200;
 ataca = 1;
 alarm_set(0,70);
 alarm_set(1,random_range(150,230));
@@ -111,9 +111,7 @@ exit;
 }
 image_index = 0;
 estado = ene.ataca;
-var enemigo = choose(obj_bs2_2Izq, obj_bs2_2Der);
-instance_create(x,y,enemigo);
-alarm_set(0,irandom_range(15 , 60));
+
 </string>
           </argument>
         </arguments>
@@ -198,7 +196,14 @@ perraHijueputa -= 1 ;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>estado = ene.parado;
+            <string>if (estado == ene.ataca)
+{
+var enemigo = choose(obj_bs2_2Izq, obj_bs2_2Der);
+instance_create(x,y,enemigo);
+alarm_set(0,irandom_range(7 , 40));
+
+}
+estado = ene.parado
 </string>
           </argument>
         </arguments>

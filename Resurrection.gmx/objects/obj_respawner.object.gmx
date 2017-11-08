@@ -189,6 +189,10 @@ if (room == room_lvl2)
 {
 nivel = room_bs2;
 }
+if (room == room_lvl3)
+{
+nivel = room_bs3;
+}
 room_goto(nivel);
 </string>
           </argument>
