@@ -101,6 +101,7 @@
         <sprite>sprites\spr_bs3Salud</sprite>
         <sprite>sprites\spr_bs3Atack</sprite>
         <sprite>sprites\spr_bs3Stay</sprite>
+        <sprite>sprites\spr_bs3_3</sprite>
       </sprites>
       <sprites name="final">
         <sprite>sprites\spr_bs4Begin</sprite>
@@ -287,6 +288,10 @@
         <object>objects\obj_bs2</object>
         <object>objects\obj_bs2_2Izq</object>
         <object>objects\obj_bs2_2Der</object>
+      </objects>
+      <objects name="boss3">
+        <object>objects\obj_bs3</object>
+        <object>objects\obj_bs3_3</object>
       </objects>
     </objects>
     <objects name="tienda">
