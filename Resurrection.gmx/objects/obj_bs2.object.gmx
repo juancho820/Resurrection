@@ -26,11 +26,61 @@
           <argument>
             <kind>1</kind>
             <string>enemyStay = spr_bs2Stay;
-estado = ene.parado;
+estado = ene.ataca;
 enemyAtack = spr_bs2Atack;
 perraHijueputa = 300;
-
+ataca = 1;
 alarm_set(0,70);
+alarm_set(1,random_range(150,230));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ataca = 1;
+alarm_set(0,5);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ataca = 0;
+alarm_set(1,random_range(300,460));
+alarm_set(2,random_range(90,150));
 </string>
           </argument>
         </arguments>
@@ -53,9 +103,10 @@ alarm_set(0,70);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_number(obj_Penemy) &gt;= 8 ) 
+            <string>if(global.loose == 1 or ataca == 0) exit;
+if (instance_number(obj_Penemy) &gt;= 4 ) 
 {
-alarm_set(0,irandom_range(70 , 120))
+alarm_set(0,irandom_range(90 , 120))
 exit;
 }
 image_index = 0;
@@ -125,6 +176,29 @@ global.win = 1;
 if (instance_exists(obj_bs2_2Der) or instance_exists(obj_bs2_2Izq ) ) exit;
 
 perraHijueputa -= 1 ;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>estado = ene.parado;
 </string>
           </argument>
         </arguments>

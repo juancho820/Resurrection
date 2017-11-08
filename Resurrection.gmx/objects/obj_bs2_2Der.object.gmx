@@ -3,7 +3,7 @@
   <spriteName>spr_bs2_2Der</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>15</string>
+            <string>8</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -63,7 +63,9 @@
 if (obj_player.estado == ej.ataca )
 {
 instance_create(x,y,obj_puntosClicks);
-instance_destroy();
+
+var path = choose(path_muerteEnemigo1Der,path_muerteEnemigo2Der,path_muerteEnemigo3Der);
+path_start(path, 5, path_action_stop, 0);
 }
 
 </string>
