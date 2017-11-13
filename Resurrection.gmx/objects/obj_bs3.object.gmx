@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemyStay = spr_bs2Stay;
+            <string>enemyStay = spr_bs3Stay;
 estado = ene.ataca;
-enemyAtack = spr_bs2Atack;
-gonorrea = 200;
+enemyAtack = spr_bs3Atack;
+putita = 300;
 ataca = 1;
 alarm_set(0,70);
 alarm_set(1,random_range(150,230));
@@ -80,7 +80,7 @@ alarm_set(0,5);
             <kind>1</kind>
             <string>ataca = 0;
 alarm_set(1,random_range(300,460));
-alarm_set(2,random_range(90,150));
+alarm_set(2,random_range(60,100));
 </string>
           </argument>
         </arguments>
@@ -104,11 +104,7 @@ alarm_set(2,random_range(90,150));
           <argument>
             <kind>1</kind>
             <string>if(global.loose == 1 or ataca == 0) exit;
-if (instance_number(obj_Penemy) &gt;= 4 ) 
-{
-alarm_set(0,irandom_range(90 , 120))
-exit;
-}
+
 image_index = 0;
 estado = ene.ataca;
 
@@ -142,7 +138,7 @@ estado = ene.parado;
 exit;
 }
 
-if (gonorrea &lt;= 0)
+if (putita &lt;= 0)
 {
 instance_destroy();
 global.win = 1;
@@ -171,9 +167,7 @@ global.win = 1;
           <argument>
             <kind>1</kind>
             <string>if (global. loose == 1) exit;
-if (instance_exists(obj_bs2_2Der) or instance_exists(obj_bs2_2Izq ) ) exit;
-
-gonorrea -= 1 ;
+putita -= 1 ;
 </string>
           </argument>
         </arguments>
@@ -198,9 +192,42 @@ gonorrea -= 1 ;
             <kind>1</kind>
             <string>if (estado == ene.ataca)
 {
-var enemigo = choose(obj_bs2_2Izq, obj_bs2_2Der);
-instance_create(x,y,enemigo);
-alarm_set(0,irandom_range(7 , 40));
+var numero = irandom_range(0 , 5);
+switch (numero)
+        {
+            case 0:
+            instance_create(160,-20,obj_bs3_3);
+            instance_create(480,-20,obj_bs3_3);
+            
+                break;
+            case 1:
+            instance_create(160,-20,obj_bs3_3);
+            instance_create(800,-20,obj_bs3_3);
+            
+                break;
+             case 2:
+            instance_create(480,-20,obj_bs3_3);
+            instance_create(800,-20,obj_bs3_3);
+            
+                break;
+            case 3:
+            instance_create(480,-20,obj_bs3_3);
+            
+            
+                break;
+            case 4:
+            instance_create(800,-20,obj_bs3_3);
+            
+            
+                break;
+             case 5:
+            instance_create(160,-20,obj_bs3_3);
+            
+            
+                break;
+        }
+
+alarm_set(0,irandom_range(30 , 60));
 
 }
 estado = ene.parado

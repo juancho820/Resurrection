@@ -41,13 +41,15 @@ vida = obj_bs2.perraHijueputa ;
 if (instance_exists(obj_bs3))
 {
 sprite_index = spr_bs3Salud;
-salud = obj_bs2.gonorrea ;
-vida = obj_bs2.gonorrea ;
+salud = obj_bs3.putita ;
+vida = obj_bs3.putita ;
 }
-//if (instance_exists(obj_bs4))
-//{
-//sprite_index = spr_bs4Salud;
-//}
+if (instance_exists(obj_bs4))
+{
+sprite_index = spr_bs4Salud;
+salud = obj_bs4.zorrita;
+vida = obj_bs4.zorrita ;
+}
 
 instance_create(x,y,obj_saludUp);
 </string>
@@ -82,7 +84,11 @@ vida = obj_bs2.perraHijueputa ;
 }
 if (instance_exists(obj_bs3))
 {
-vida = obj_bs3.gonorrea ;
+vida = obj_bs3.putita ;
+}
+if (instance_exists(obj_bs4))
+{
+vida = obj_bs4.zorrita ;
 }
 </string>
           </argument>

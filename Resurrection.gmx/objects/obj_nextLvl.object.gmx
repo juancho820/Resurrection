@@ -34,6 +34,10 @@ if (room == room_bs2)
 {
 room_goto(room_story3)
 }
+if (room == room_bs3)
+{
+room_goto(room_story4)
+}
 </string>
           </argument>
         </arguments>

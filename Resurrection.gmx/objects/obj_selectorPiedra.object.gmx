@@ -82,28 +82,28 @@ if (lugar == obj_pechopiedra)
 {
 decir = "+1 health";
 global.vida += 1;
-instance_create(lugar.x,lugar.y,obj_luzTienda);
+global.t1 = 1;
 }
 
 if (lugar == obj_botaspiedra)
 {
 decir = "+1 health";
 global.vida += 1;
-instance_create(lugar.x,lugar.y,obj_luzTienda);
+global.t2 = 1;
 }
 
 if (lugar == obj_escudopiedra)
 {
 decir = "+1 damage";
 global.dano += 1;
-instance_create(lugar.x,lugar.y,obj_luzTienda);
+global.t3 = 1;
 }
 
 if (lugar == obj_lanzapiedra)
 {
 decir = "+1 damage";
 global.dano += 1;
-instance_create(lugar.x,lugar.y,obj_luzTienda);
+global.t4 = 1;
 }
 
 
@@ -135,7 +135,10 @@ global.decir = decir;
             <kind>1</kind>
             <string>x = lugar.x;
 y = lugar.y;
-
+if (lugar == obj_fondo)
+{
+x = lugar.x - 700 ;
+}
 
 
 if (parar == 1 )

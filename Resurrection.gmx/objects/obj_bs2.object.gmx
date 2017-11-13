@@ -37,6 +37,40 @@ alarm_set(1,random_range(150,230));
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>305</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_timeline_set</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>14</kind>
+            <timeline>time_coco</timeline>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -173,7 +207,7 @@ global.win = 1;
             <string>if (global. loose == 1) exit;
 if (instance_exists(obj_bs2_2Der) or instance_exists(obj_bs2_2Izq ) ) exit;
 
-perraHijueputa -= 1 ;
+perraHijueputa -= global.dano ;
 </string>
           </argument>
         </arguments>
@@ -198,9 +232,8 @@ perraHijueputa -= 1 ;
             <kind>1</kind>
             <string>if (estado == ene.ataca)
 {
-var enemigo = choose(obj_bs2_2Izq, obj_bs2_2Der);
-instance_create(x,y,enemigo);
-alarm_set(0,irandom_range(7 , 40));
+alarm_set(3,0);
+alarm_set(0,irandom_range(50 , 76));
 
 }
 estado = ene.parado

@@ -97,7 +97,8 @@ switch (global.t1)
                 break;
 
 }
-instance_create(lugar.x,lugar.y,obj_luzTienda);
+
+global.t1 = 3;
 }
 if (lugar == obj_botasoro)
 {
@@ -116,7 +117,8 @@ switch (global.t2)
                 global.vida += 1;
                 break;
 }
-instance_create(lugar.x,lugar.y,obj_luzTienda);
+global.t2 = 3;
+
 }
 if (lugar == obj_escudooro)
 {
@@ -135,7 +137,8 @@ switch (global.t3)
                 global.dano += 1;
                 break;
 }
-instance_create(lugar.x,lugar.y,obj_luzTienda);
+global.t3 = 3;
+
 }
 if (lugar == obj_lanzaoro)
 {
@@ -154,7 +157,8 @@ switch (global.t4)
                 global.dano += 1;
                 break;
 }
-instance_create(lugar.x,lugar.y,obj_luzTienda);
+global.t4 = 3;
+
 }
 global.decir = decir;
 
@@ -185,7 +189,10 @@ global.decir = decir;
             <kind>1</kind>
             <string>x = lugar.x;
 y = lugar.y;
-
+if (lugar == obj_fondo)
+{
+x = lugar.x - 700 ;
+}
 
 if (parar == 1 )
 {

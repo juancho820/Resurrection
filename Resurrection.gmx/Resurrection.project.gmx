@@ -107,6 +107,7 @@
         <sprite>sprites\spr_bs4Begin</sprite>
         <sprite>sprites\spr_bs4Relax</sprite>
         <sprite>sprites\spr_bs4Salud</sprite>
+        <sprite>sprites\spr_powerBall</sprite>
       </sprites>
       <sprite>sprites\spr_saludUp</sprite>
     </sprites>
@@ -157,6 +158,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\back_forestSun</background>
+    <background>background\back_sky</background>
     <background>background\background0</background>
     <background>background\background2</background>
     <background>background\back_otherWorld</background>
@@ -182,6 +184,8 @@
       <path>paths\path_tierraDer</path>
       <path>paths\path_tierraIzq</path>
     </paths>
+    <path>paths\path_lanza</path>
+    <path>paths\path_powerBall</path>
   </paths>
   <scripts name="scripts">
     <scripts name="player">
@@ -293,6 +297,10 @@
         <object>objects\obj_bs3</object>
         <object>objects\obj_bs3_3</object>
       </objects>
+      <objects name="boss 4">
+        <object>objects\obj_bs4</object>
+        <object>objects\obj_powerBall</object>
+      </objects>
     </objects>
     <objects name="tienda">
       <object>objects\obj_fondo</object>
@@ -325,9 +333,12 @@
       <object>objects\obj_hudlav</object>
       <object>objects\obj_llave</object>
       <object>objects\obj_numerosUp</object>
-      <object>objects\obj_luzTienda</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\time_FBoss</timeline>
+    <timeline>timelines\time_coco</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\room_config</room>
     <room>rooms\room_mainMenu</room>
@@ -343,6 +354,7 @@
     <room>rooms\room_bs2</room>
     <room>rooms\room_lvl3</room>
     <room>rooms\room_bs3</room>
+    <room>rooms\room_bs4</room>
     <room>rooms\room_tienda</room>
   </rooms>
   <help>
