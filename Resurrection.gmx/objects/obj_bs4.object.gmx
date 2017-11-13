@@ -182,7 +182,8 @@ zorrita -= global.dano ;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (estado == ene.parado)
+            <string>if(global.loose == 1 )exit;
+if (estado == ene.parado)
 {alarm_set(0,0)}
 estado = ene.ataca;
 </string>
