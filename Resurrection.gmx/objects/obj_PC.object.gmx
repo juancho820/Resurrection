@@ -26,17 +26,23 @@
           <argument>
             <kind>1</kind>
             <string>///variables
-global.vida = 3;
+
 global.salud = global.vida ;
+
 global.der = 0;
 global.izq = 0;
 global.points = 0 ;
-global.dano = 1;
+
 global.slideDer = 0;
 global.slideIzq = 0;
 global.loose = 0;
 global.win = 0;
 instance_create(0,0,obj_beginLvl);
+
+if (global.vida &gt; 7)
+{
+global.vida = 7; 
+}
 
 
 </string>

@@ -173,7 +173,15 @@ slide = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if collision_circle(x, y, 20, obj_Cursor, false, true)
+            <string>if (hit == 1)
+{
+image_blend = c_red;
+}
+else
+{
+
+image_blend = c_yellow;
+}
 </string>
           </argument>
         </arguments>

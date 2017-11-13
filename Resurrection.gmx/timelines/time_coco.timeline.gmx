@@ -19,13 +19,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_bs2.estado == ene.parado)
-{
+            <string>
 var enemigo = choose(obj_bs2_2Izq);
 instance_create(x,y,enemigo);
 var enemigo = choose( obj_bs2_2Der);
 instance_create(x,y,enemigo);
-}
+
 
 </string>
           </argument>
@@ -52,12 +51,11 @@ instance_create(x,y,enemigo);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_bs2.estado == ene.parado)
-{
+            <string>
 var enemigo = choose(obj_bs2_2Izq,obj_bs2_2Der);
 instance_create(x,y,enemigo);
 
-}
+
 </string>
           </argument>
         </arguments>
@@ -83,12 +81,11 @@ instance_create(x,y,enemigo);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_bs2.estado == ene.parado)
-{
+            <string>
 var enemigo = choose(obj_bs2_2Izq,obj_bs2_2Der);
 instance_create(x,y,enemigo);
 
-}
+
 </string>
           </argument>
         </arguments>
@@ -114,12 +111,11 @@ instance_create(x,y,enemigo);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_bs2.estado == ene.parado)
-{
+            <string>
 var enemigo = choose(obj_bs2_2Izq,obj_bs2_2Der);
 instance_create(x,y,enemigo);
 
-}
+
 </string>
           </argument>
         </arguments>
@@ -145,12 +141,11 @@ instance_create(x,y,enemigo);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_bs2.estado == ene.parado)
-{
+            <string>
 var enemigo = choose(obj_bs2_2Izq,obj_bs2_2Der);
 instance_create(x,y,enemigo);
 
-}
+
 </string>
           </argument>
         </arguments>
@@ -176,12 +171,11 @@ instance_create(x,y,enemigo);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_bs2.estado == ene.parado)
-{
+            <string>
 var enemigo = choose(obj_bs2_2Izq,obj_bs2_2Der);
 instance_create(x,y,enemigo);
 
-}
+
 </string>
           </argument>
         </arguments>

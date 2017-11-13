@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>alpha = 1;
+x = 480;
+y = 320;
 </string>
           </argument>
         </arguments>

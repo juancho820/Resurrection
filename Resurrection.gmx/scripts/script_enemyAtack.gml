@@ -3,15 +3,22 @@ if (instance_exists(obj_bs1H))
 {
 image_speed = 1;
 }
-else
+ else
 {
-if (instance_exists(obj_bs2))
+  if (instance_exists(obj_bs2))
 {
-image_speed = 1;
+  image_speed = 1;
 }
-else
+   else
 {
-image_speed = 0.6;
+    if (instance_exists(obj_bs4))
+{
+    image_speed = 0.3;
+}
+      else
+{
+      image_speed = 0.6;
+}
 }
 }
 
