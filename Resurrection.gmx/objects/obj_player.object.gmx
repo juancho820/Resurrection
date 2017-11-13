@@ -173,7 +173,7 @@ slide = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (hit == 1)
+            <string>if (obj_playerBack.hit == 1)
 {
 image_blend = c_red;
 }
