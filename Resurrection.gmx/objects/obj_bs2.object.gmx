@@ -28,7 +28,7 @@
             <string>enemyStay = spr_bs2Stay;
 estado = ene.ataca;
 enemyAtack = spr_bs2Atack;
-perraHijueputa = 200;
+perraHijueputa = 120;
 ataca = 1;
 alarm_set(0,70);
 alarm_set(1,random_range(150,230));
@@ -203,7 +203,7 @@ global.win = 1;
           <argument>
             <kind>1</kind>
             <string>if (global. loose == 1) exit;
-if (instance_exists(obj_bs2_2Der) or instance_exists(obj_bs2_2Izq ) ) exit;
+
 
 perraHijueputa -= global.dano ;
 </string>

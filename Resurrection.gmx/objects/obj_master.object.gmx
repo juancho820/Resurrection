@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>
-global.llaves = 300;
+global.llaves = 0;
 global.vida = 3;
 global.dano = 1;
 global.empezo = 1;

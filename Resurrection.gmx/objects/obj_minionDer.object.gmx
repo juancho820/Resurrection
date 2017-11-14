@@ -258,8 +258,8 @@ path_end();
 golpeado = 1
 alarm_set(2,5);
 estado = ene.herido ; 
-vida -= 1;
-if (vida == 0)
+vida -= global.dano;
+if (vida &lt;= 0)
 {
 instance_create(x,y,obj_puntosClicks);
 var path = choose(path_muerteEnemigo1Der,path_muerteEnemigo2Der,path_muerteEnemigo3Der);

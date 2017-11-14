@@ -8,6 +8,20 @@
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_tock</sound>
+    <sound>sound\sound_golpe</sound>
+    <sound>sound\sound_lose</sound>
+    <sound>sound\sound_win</sound>
+    <sound>sound\sound_menu</sound>
+    <sound>sound\sound_historia1</sound>
+    <sound>sound\sound_lvl1y3</sound>
+    <sound>sound\sound_lvl4</sound>
+    <sound>sound\sound_lvl2y4</sound>
+    <sound>sound\sound_tienda</sound>
+    <sound>sound\sound_story3</sound>
+    <sound>sound\sound_story4</sound>
+    <sound>sound\sound_map</sound>
+    <sound>sound\sound_story2</sound>
+    <sound>sound\sound_final</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_boss</sprite>
@@ -80,6 +94,7 @@
       <sprite>sprites\spr_story4</sprite>
       <sprite>sprites\spr_skip</sprite>
       <sprite>sprites\spr_next</sprite>
+      <sprite>sprites\spr_storyFinal</sprite>
     </sprites>
     <sprites name="bosses">
       <sprite>sprites\spr_bs1HStay</sprite>
@@ -203,6 +218,7 @@
   <fonts name="fonts">
     <font>fonts\font_cliks</font>
     <font>fonts\font_score</font>
+    <font>fonts\font_looseWin</font>
   </fonts>
   <objects name="objects">
     <objects name="player">
@@ -281,6 +297,7 @@
       <object>objects\obj_stry4</object>
       <object>objects\obj_next</object>
       <object>objects\obj_skip</object>
+      <object>objects\obj_finalStory</object>
     </objects>
     <objects name="bosses">
       <object>objects\obj_midPant</object>
@@ -356,6 +373,7 @@
     <room>rooms\room_bs3</room>
     <room>rooms\room_bs4</room>
     <room>rooms\room_tienda</room>
+    <room>rooms\room_final</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
